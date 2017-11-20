@@ -29,6 +29,8 @@ html,
 body {
   height: 100%;
   background-color: #1c1c1c;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 body {
   color: #fff;
@@ -136,11 +138,11 @@ body {
 @media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
-    position: fixed;
+    /*position: fixed;*/
     top: 0;
   }
   .mastfoot {
-    position: fixed;
+   /* position: fixed;*/
     bottom: 0;
   }
   /* Start the vertical centering */
