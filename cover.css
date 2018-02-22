@@ -56,6 +56,7 @@ body {
 .cover-container {
   margin-right: auto;
   margin-left: auto;
+  /*position: absolute;*/
 }
 
 /* Padding for spacing */
@@ -150,7 +151,9 @@ body {
   }
   /* Start the vertical centering */
   .site-wrapper-inner {
-    vertical-align: middle;
+    vertical-align: top;
+    /*vertical-align: middle;*/
+
   }
   /* Handle the widths */
   .masthead,
