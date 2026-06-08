@@ -1,250 +1,315 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <meta name="viewport" content="width=device-width, initial-scale=1">
-                    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-                    <meta name="description" content="Sarah Azouvi's Homepage">
-                        <meta name="author" content="Sarah Azouvi">
-                            <link rel="icon" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/favicon.ico">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sarah Azouvi — Publications and activities">
+  <meta name="author" content="Sarah Azouvi">
+  <title>Publications — Sarah Azouvi</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .anchor-nav {
+      display: flex;
+      gap: 1.25rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+    .anchor-nav a {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      border: 0.5px solid var(--border);
+      padding: 3px 12px;
+      border-radius: 999px;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .anchor-nav a:hover { border-color: var(--border-hover); color: var(--text); }
 
-                                <title>Sarah Azouvi</title>
-                                <!-- Bootstrap core CSS -->
-                                <link <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    .collapse-toggle {
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 1.25rem;
+    }
+    .toggle-icon {
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      margin-left: auto;
+      user-select: none;
+    }
+    .collapse-toggle:hover .toggle-icon { color: var(--text); }
 
-                                    <!-- Custom styles for this template -->
-                                    <link href="cover.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="site-wrapper">
+    #papers-list.collapsed,
+    #talks-list.collapsed,
+    #blogposts-list.collapsed,
+    #other-list.collapsed { display: none; }
+  </style>
+</head>
+<body>
+<div class="page">
 
-            <div class="site-wrapper-inner">
+  <nav>
+    <a class="nav-brand" href="index.html">Sarah Azouvi</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="publication.html" class="active">Publications and activities</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-                <div class="cover-container">
+  <div class="page-header">
+    <h1 class="page-title">Publications &amp; Activities</h1>
+    <p class="page-subtitle">Please check my <a href="https://scholar.google.com/citations?user=06C63r0AAAAJ&hl=en" target="_blank">Google Scholar profile</a> for an up-to-date list of papers and my <a href="https://medium.com/@sazouvi" target="_blank">Medium</a> account for blogposts.</p>
+    <div class="anchor-nav">
+      <a href="#papers">Papers</a>
+      <a href="#talks">Invited Talks</a>
+      <a href="#blogposts">Blogposts</a>
+      <a href="#other">Other Events</a>
+    </div>
+  </div>
 
-                    <div class="masthead clearfix">
-                        <div class="inner">
-                            <h3 class="masthead-brand">Sarah Azouvi</h3>
-                            <nav>
-                                <ul class="nav masthead-nav">
-                                  <li ><a href="index.html">Home</a></li>
-                                  <li><a href="background.html">Background</a></li>
-                                  <li class="active"><a href="publication.html">Publications and activities</a></li>
-                                  <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="inner cover">
+  <section id="papers" style="padding-top: 0; margin-top: 0; border-top: none;">
+    <button class="collapse-toggle" onclick="togglePapers(this)">
+      <span class="section-label" style="margin:0">Papers</span>
+      <span class="toggle-icon">▾ collapse</span>
+    </button>
+    <ul class="pub-list" id="papers-list">
 
-                      <p class="lead">
-                        Please check my <a href="https://scholar.google.com/citations?user=06C63r0AAAAJ&hl=en" target="_blank">Google Scholar profile</a> 
-                        for an up-to-date list of papers and my <a href="https://medium.com/@sazouvi" target="_blank">Medium</a> account for blogposts.
-                      </p>
-                        
-                  <h1 class="cover-heading">Papers</h1>
-                  <p class="lead">
-                    <tr>
-                      <td>
-                        <font size="+1.5"><dt> <a href="https://arxiv.org/abs/2308.06955" target="_blank">Base Fee Manipulation In Ethereum’s EIP-1559 Transaction Fee Mechanism </a> </dt></font>
-                      <dd>Sarah Azouvi, Guy Goren, Alexander Hicks, Lioba Heimbach </dd>
-                      <dd>DISC 2023</dd>
-                      </td></tr>
-                    <tr>
-                      <td>
-                        <font size="+1.5"><dt> <a href="https://eprint.iacr.org/2019/1440.pdf" target="_blank"></a>Security Analysis of Filecoin’s Expected Consensus in
-                          the Byzantine vs Honest Model </a> </dt></font>
-                      <dd>Xuechao Wang, Sarah Azouvi, Marko Vukolić </dd>
-                      <dd>Advances in Financial Technologies 2023</dd>
-                      </td></tr>
-                    <tr>
-                      <td>
-                        <font size="+1.5"><dt> <a href="https://arxiv.org/pdf/2204.11980.pdf" target="_blank">Decentralisation conscious players and system reliability </a> </dt></font>
-                      <dd> Sarah Azouvi and Alexander Hicks</dd>
-                      <dd>Financial Cryptography 2022</dd>
-                      </td></tr>
-                      <tr>
-                        <td>
-                          <font size="+1.5"><dt> <a href="https://arxiv.org/pdf/2201.09009" target="_blank">Sliding window challenge process for congestion detection </a> </dt></font>
-                        <dd> Ayelet Lotem, Sarah Azouvi, Patrick McCorry, Aviv Zohar</dd>
-                        <dd>Financial Cryptography 2022</dd>
-                        </td></tr>
-                    <tr>
-                      <tr>
-                        <td>
-                          <font size="+1.5"><dt> <a href="https://arxiv.org/pdf/2211.12050" target="_blank">Modeling Resources in Permissionless Longest-chain Total-order Broadcast </a> </dt></font>
-                        <dd> Sarah Azouvi, Christian Cachin, Duc V Le, Marko Vukolic, Luca Zanolini </dd>
-                        <dd>OPODIS 2022</dd>
-                        </td></tr>
-                      <td>
-                        <font size="+1.5"><dt> <a href="https://dl.acm.org/doi/pdf/10.1145/3479722.3480996" target="_blank">Pikachu: Securing pos blockchains from long-range attacks by checkpointing into bitcoin pow using taproot </a> </dt></font>
-                      <dd>Sarah Azouvi and Marko Vukolić. </dd>
-                      <dd> 2022 ACM Workshop on Developments in
-                        Consensus</dd>
-                      </td></tr>
-                      <tr>
-                        <td>
-                          <font size="+1.5"><dt> <a href="https://dl.acm.org/doi/pdf/10.1145/3479722.3480996" target="_blank">
-                       
-                            Private attacks in longest chain proof-of-stake protocols with single secret leader elections </a> </dt></font>
-                        <dd>Sarah Azouvi, Daniele Cappelletti </dd>
-                        <dd>Advances in Financial Technologies 2021</dd>
-                        </td></tr>
-                      <tr>
-  <td>
-    <font size="+1.5"><dt> <a href="https://eprint.iacr.org/2019/1440.pdf" target="_blank">Winkle: Foiling Long-Range Attacks in Proof-of-Stake Systems </a> </dt></font>
-  <dd>Sarah Azouvi and George Danezis and Valeria Nikolaenko </dd>
-  <dd>Advances in Financial Technologies 2020</dd>
-  </td></tr>
+      <li class="pub-item">
+        <a class="pub-title" href="https://arxiv.org/abs/2308.06955" target="_blank">Base Fee Manipulation In Ethereum's EIP-1559 Transaction Fee Mechanism</a>
+        <span class="pub-authors">Sarah Azouvi, Guy Goren, Alexander Hicks, Lioba Heimbach</span>
+        <span class="pub-venue">DISC 2023</span>
+      </li>
 
-               <tr>
-  <td>
-    <font size="+1.5"><dt> <a href="https://arxiv.org/pdf/1905.08595.pdf" target="_blank">SoK: Tools for Game Theoretic Models of Security for Cryptocurrencies </a><a href="slides/ces20-presentation.pdf"target="_blank">(slides)</a> </dt></font>
-  <dd>Sarah Azouvi and Alexander Hicks </dd>
-  <dd>Cryptoeconomic Systems 2020</dd>
-  </td></tr>
-               <tr>
-  <td>
-    <font size="+1.5"><dt> <a href="https://arxiv.org/abs/1805.06786" target="_blank">Betting on Blockchain Consensus with Fantômette </a>  <a href="slides/fantomette-slides.pdf"target="_blank">(slides)</a></dt></font>
-  <dd>Sarah Azouvi, Patrick McCorry and Sarah Meiklejohn </dd>
-  <dd>ArXiv:1805.06786</dd>
-    <dd> Videos from
-      <a href="https://www.youtube.com/watch?v=PhoCCSalPAE"target="_blank"> CESC 2018</a>,
-      <a href="https://www.youtube.com/watch?v=jAS4HuIqBpU"target="_blank"> Stanford Blockchain Conference 2019</a>,
-  <a href="https://l.messenger.com/l.php?u=https%3A%2F%2Fyoutu.be%2FVDinjJJpGGc%3Ft%3D3h57m30s&h=AT2ZM4ZGOiko5oGb-ojXxohr7RdkGVJkPnTEo9Oho5NQq7bUPOylmAEO1Oan3k-5UhLNSQ_QyQWI-2Wv_kHA9BDqnrLr3_DCbZf1lBv-H6g2xScWsdQuj2yW1dWgHZy1d8SrEvXKcjo1pouk1viY0KcL"target="_blank"> the Master Workshop (Amtersdam)</a>.
-</dd>
-  </td></tr>
-               <tr>
-  <td>
-    <font size="+1.5"><dt> <a href="papers/spw18.pdf" target="_blank">Incentives in Security Protocols </a> </dt></font>
-  <dd>Sarah Azouvi, Alexander Hicks and Steven Murdoch </dd>
-  <dd>Twenty-sixth International Workshop on Security Protocols</dd>
-  </td></tr>
+      <li class="pub-item">
+        <a class="pub-title" href="https://eprint.iacr.org/2019/1440.pdf" target="_blank">Security Analysis of Filecoin's Expected Consensus in the Byzantine vs Honest Model</a>
+        <span class="pub-authors">Xuechao Wang, Sarah Azouvi, Marko Vukolić</span>
+        <span class="pub-venue">Advances in Financial Technologies 2023</span>
+      </li>
 
-                   <tr>
-  <td>
-    <font size="+1.5"><dt><a href="papers/fc18.pdf" target="_blank"> Egalitarian Society or Benevolent Dictatorship? The State of Cryptocurrency Governance </a> <a href="slides/bitcoin18.pdf"target="_blank">(slides)</a></dt></font>
-  <dd>Sarah Azouvi, Mary Maller and Sarah Meiklejohn </dd>
-  <dd>The Fifth Workshop on Bitcoin and Blockchain Research</dd>
-  <dd>This work was featured on <a href='https://www.coindesk.com/major-blockchains-pretty-much-still-centralized-research-finds/' target="_blank"> CoinDesk </a></dd>
-  </td>
+      <li class="pub-item">
+        <a class="pub-title" href="https://arxiv.org/pdf/2204.11980.pdf" target="_blank">Decentralisation Conscious Players and System Reliability</a>
+        <span class="pub-authors">Sarah Azouvi and Alexander Hicks</span>
+        <span class="pub-venue">Financial Cryptography 2022</span>
+      </li>
 
-</tr>
+      <li class="pub-item">
+        <a class="pub-title" href="https://arxiv.org/pdf/2201.09009" target="_blank">Sliding Window Challenge Process for Congestion Detection</a>
+        <span class="pub-authors">Ayelet Lotem, Sarah Azouvi, Patrick McCorry, Aviv Zohar</span>
+        <span class="pub-venue">Financial Cryptography 2022</span>
+      </li>
 
-                  	<tr>
-  <td><font size="+1.5"><dt><a href="https://arxiv.org/pdf/1711.03936.pdf"target="_blank">SoK: Consensus in the age of Blockchains</a> </dt></font>
-  <dd>Shehar Bano, Alberto Sonnino, Mustafa Al-Bassam, Sarah Azouvi, Patrick McCorry, Sarah Meiklejohn and George Danezis</dd>
-  <dd>Advances in Financial Technologies 2019</dd>
-  </td>
-</tr>
-   <tr>
-  <td>
-    <font size="+1.5"><dt><a href="papers/caucus.pdf"target="_blank" >Winning the Caucus Race: Continuous Leader Election via Public Randomness </a></dt></font>
-  <dd>Sarah Azouvi, Patrick McCorry and Sarah Meiklejohn </dd>
-  <dd>ArXiv</dd>
-  </td>
+      <li class="pub-item">
+        <a class="pub-title" href="https://arxiv.org/pdf/2211.12050" target="_blank">Modeling Resources in Permissionless Longest-chain Total-order Broadcast</a>
+        <span class="pub-authors">Sarah Azouvi, Christian Cachin, Duc V Le, Marko Vukolic, Luca Zanolini</span>
+        <span class="pub-venue">OPODIS 2022</span>
+      </li>
 
-</tr>
+      <li class="pub-item">
+        <a class="pub-title" href="https://dl.acm.org/doi/pdf/10.1145/3479722.3480996" target="_blank">Pikachu: Securing PoS Blockchains from Long-Range Attacks by Checkpointing into Bitcoin PoW Using Taproot</a>
+        <span class="pub-authors">Sarah Azouvi and Marko Vukolić</span>
+        <span class="pub-venue">ACM Workshop on Developments in Consensus 2022</span>
+      </li>
 
+      <li class="pub-item">
+        <span class="pub-title">Private Attacks in Longest Chain Proof-of-Stake Protocols with Single Secret Leader Elections</span>
+        <span class="pub-authors">Sarah Azouvi, Daniele Cappelletti</span>
+        <span class="pub-venue">Advances in Financial Technologies 2021</span>
+      </li>
 
-                    <tr>
-  <td><font size="+1.5"><dt><a href="papers/cbt17.pdf"target="_blank">Who Am I? Secure Identity Registration on
-          Distributed Ledgers</a> <a href="slides/cbt17.pdf"target="_blank">(slides)</a></dt></font>
-  <dd>Sarah Azouvi, Mustafa Al-Bassam and Sarah Meiklejohn</dd>
-  <dd>International Workshop on Cryptocurrencies and Blockchain Technology</dd>
-  </td>
+      <li class="pub-item">
+        <a class="pub-title" href="https://eprint.iacr.org/2019/1440.pdf" target="_blank">Winkle: Foiling Long-Range Attacks in Proof-of-Stake Systems</a>
+        <span class="pub-authors">Sarah Azouvi, George Danezis, Valeria Nikolaenko</span>
+        <span class="pub-venue">Advances in Financial Technologies 2020</span>
+      </li>
 
-</tr>
+      <li class="pub-item">
+        <a class="pub-title" href="https://arxiv.org/pdf/1905.08595.pdf" target="_blank">SoK: Tools for Game Theoretic Models of Security for Cryptocurrencies</a>
+        <span class="pub-authors">Sarah Azouvi and Alexander Hicks</span>
+        <span class="pub-venue">Cryptoeconomic Systems 2020</span>
+        <div class="pub-links">
+          <a class="pub-link" href="slides/ces20-presentation.pdf" target="_blank">Slides</a>
+        </div>
+      </li>
 
-<h1 class="cover-heading">Invited Talks</h1>
-<tr>
-  <td><font size="+1.5"><dt><a href="https://www.youtube.com/watch?v=bN2s8sZhKpM&t=5391s"target="_blank"> Secure Cross-Rollup Communication with the Scroll Interop Gadget</a></dt></font>
-  <dd>Sarah Azouvi</dd>
-  <dd>Columbia CryptoEconomics Workshop (December 2024, NYC)</dd>
-  </td>
-  </tr>
-<tr>
-  <td><font size="+1.5"><dt><a href="https://www.youtube.com/watch?v=1YgyOtax0kg"target="_blank"> Fighting Deplatforming and Censorship on OnlyFans</a></dt></font>
-  <dd>Sarah Azouvi</dd>
-  <dd>EthCC[6] (July 2023, Paris)</dd>
-  </td>
-  </tr>
-<tr>
-<td><font size="+1.5"><dt>Designing Decentralized Systems with Incentives</a> <a href="slides/talk-epfl.pdf"target="_blank">(slides)</a></dt></font>
-<dd>Sarah Azouvi</dd>
-<dd>EPFL (December, 10th 2018)</dd>
-</td>
-</tr>
-<tr>
-<td><font size="+1.5"><dt>Decentralisation of
-Cryptocurrencies</a> <a href="slides/governance-cp.pdf"target="_blank">(slides)</a></dt></font>
-<dd>Sarah Azouvi</dd>
-<dd>The London Cryptoparty (January, 25th 2018)</dd>
-</td>
-</tr>
-<tr>
-<td><font size="+1.5"><dt>Introduction to Blockchain Technologies</a> <a href="slides/blockchain-pi.pdf"target="_blank">(slides)</a></dt></font>
-<dd>Sarah Azouvi</dd>
-<dd>Privacy Internation Forum (October, 19th 2017)</dd>
-</td>
-</tr>
+      <li class="pub-item">
+        <a class="pub-title" href="https://arxiv.org/abs/1805.06786" target="_blank">Betting on Blockchain Consensus with Fantômette</a>
+        <span class="pub-authors">Sarah Azouvi, Patrick McCorry, Sarah Meiklejohn</span>
+        <span class="pub-venue">ArXiv · Presented at CESC 2018, Stanford Blockchain Conference 2019</span>
+        <div class="pub-links">
+          <a class="pub-link" href="slides/fantomette-slides.pdf" target="_blank">Slides</a>
+          <a class="pub-link" href="https://www.youtube.com/watch?v=PhoCCSalPAE" target="_blank">Video (CESC)</a>
+          <a class="pub-link" href="https://www.youtube.com/watch?v=jAS4HuIqBpU" target="_blank">Video (Stanford)</a>
+        </div>
+      </li>
 
+      <li class="pub-item">
+        <a class="pub-title" href="papers/spw18.pdf" target="_blank">Incentives in Security Protocols</a>
+        <span class="pub-authors">Sarah Azouvi, Alexander Hicks, Steven Murdoch</span>
+        <span class="pub-venue">26th International Workshop on Security Protocols</span>
+      </li>
 
+      <li class="pub-item">
+        <a class="pub-title" href="papers/fc18.pdf" target="_blank">Egalitarian Society or Benevolent Dictatorship? The State of Cryptocurrency Governance</a>
+        <span class="pub-authors">Sarah Azouvi, Mary Maller, Sarah Meiklejohn</span>
+        <span class="pub-venue">The Fifth Workshop on Bitcoin and Blockchain Research</span>
+        <div class="pub-links">
+          <a class="pub-link" href="slides/bitcoin18.pdf" target="_blank">Slides</a>
+          <a class="pub-link" href="https://www.coindesk.com/major-blockchains-pretty-much-still-centralized-research-finds/" target="_blank">CoinDesk</a>
+        </div>
+      </li>
 
-<tr>
-<td><font size="+1.5"><dt>Panel on tradeoffs in scaling consensus with Mustafa Al Bassam <a href="https://www.youtube.com/watch?v=ICfNAE1vWn8"target="_blank"> (Video)</a></dt></font>
-<dd>HardFork 2018, London (December, 13th 2018)</dd>
-</td>
-</tr>
+      <li class="pub-item">
+        <a class="pub-title" href="https://arxiv.org/pdf/1711.03936.pdf" target="_blank">SoK: Consensus in the Age of Blockchains</a>
+        <span class="pub-authors">Shehar Bano, Alberto Sonnino, Mustafa Al-Bassam, Sarah Azouvi, Patrick McCorry, Sarah Meiklejohn, George Danezis</span>
+        <span class="pub-venue">Advances in Financial Technologies 2019</span>
+      </li>
 
+      <li class="pub-item">
+        <a class="pub-title" href="papers/caucus.pdf" target="_blank">Winning the Caucus Race: Continuous Leader Election via Public Randomness</a>
+        <span class="pub-authors">Sarah Azouvi, Patrick McCorry, Sarah Meiklejohn</span>
+        <span class="pub-venue">ArXiv</span>
+      </li>
 
-<h1 class="cover-heading">Blogposts</h1>
-<li>My <a href="https://medium.com/@sazouvi" target="_blank">Medium</a> account contains a couple of posts about decentralized AI.</li>
-                    <li>
-                      I attended the
-                           <A HREF="https://spw2018.crocs.fi.muni.cz/"target="_blank">26th 
-                           International Workshop on Security Protocols</A> in Cambridge
-                      between March, 19th 2017 and March, 21st 2018. A blogpost about it can be found <a href="https://www.benthamsgaze.org/2018/03/26/incentives-in-security-protocols/" target="_blank">here</a>.
-                      
-                      </li>
-                    <li>
-                      I attended the
-                           <A HREF="https://blockchain-summer.epfl.ch/"target="_blank">Swiss Blockchain Summer School 2017</A> in EPFL
-                      between June, 21st 2017 and June, 24th 2017 and co-wrote a <a href="https://www.benthamsgaze.org/2017/07/04/epfl-blockchain-summer-school/" target="_blank">blogpost</a> about it.
-                          
-                      </li>
+      <li class="pub-item">
+        <a class="pub-title" href="papers/cbt17.pdf" target="_blank">Who Am I? Secure Identity Registration on Distributed Ledgers</a>
+        <span class="pub-authors">Sarah Azouvi, Mustafa Al-Bassam, Sarah Meiklejohn</span>
+        <span class="pub-venue">International Workshop on Cryptocurrencies and Blockchain Technology</span>
+        <div class="pub-links">
+          <a class="pub-link" href="slides/cbt17.pdf" target="_blank">Slides</a>
+        </div>
+      </li>
 
-<li>
-                    I attended the
-                         <A HREF="http://fc16.ifca.ai/index.html/"target="_blank">Financial Cryptography and Data Security 2016</A> conference in Barbados
-                    between February, 24th and February, 26th.
-                         I wrote a <a href="https://www.benthamsgaze.org/2016/03/16/bitcoin-workshop-at-financial-crypto-2016/">blogpost</a> about the
-                         Bitcoin Workshop.
-                    </li>
+    </ul>
+  </section>
 
-<h1 class="cover-heading">Other Events</h1>
-                        <p class="lead">
-                        <ul class="list-unstyled"><li>
-                        I sometimes mentor the Bitcoin Workshop at the London
-                        <a href="https://www.cryptoparty.in/london"target="_blank">
-                       CryptoParty</a>. My handouts can be found
-                       <a href="handouts/Cryptoparty.pdf"target="_blank">here</a>
-                       (done jointly with Alexander Hicks) and <a href="handouts/bitcoin.pdf"target="_blank">here</a>.
-                  </li>
-                  </ul>
-                </p>
-                    </div>
+  <section id="talks">
+    <button class="collapse-toggle" onclick="toggleSection('talks-list', this)">
+      <span class="section-label" style="margin:0">Invited Talks</span>
+      <span class="toggle-icon">▾ collapse</span>
+    </button>
+    <ul class="pub-list" id="talks-list">
 
-                    <!-- Bootstrap core JavaScript
-                     ================================================== -->
-                    <!-- Placed at the end of the document so the pages load faster -->
-                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-                    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-                    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/ie10-viewport-bug-workaround.js"></script>
-    </body>
+      <li class="pub-item">
+        <a class="pub-title" href="https://www.youtube.com/watch?v=bN2s8sZhKpM&t=5391s" target="_blank">Secure Cross-Rollup Communication with the Scroll Interop Gadget</a>
+        <span class="pub-authors">Sarah Azouvi</span>
+        <span class="pub-venue">Columbia CryptoEconomics Workshop · December 2024, NYC</span>
+        <div class="pub-links">
+          <a class="pub-link" href="https://www.youtube.com/watch?v=bN2s8sZhKpM&t=5391s" target="_blank">Video</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <a class="pub-title" href="https://www.youtube.com/watch?v=1YgyOtax0kg" target="_blank">Fighting Deplatforming and Censorship on OnlyFans</a>
+        <span class="pub-authors">Sarah Azouvi</span>
+        <span class="pub-venue">EthCC[6] · July 2023, Paris</span>
+        <div class="pub-links">
+          <a class="pub-link" href="https://www.youtube.com/watch?v=1YgyOtax0kg" target="_blank">Video</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <span class="pub-title">Designing Decentralized Systems with Incentives</span>
+        <span class="pub-authors">Sarah Azouvi</span>
+        <span class="pub-venue">EPFL · December 2018</span>
+        <div class="pub-links">
+          <a class="pub-link" href="slides/talk-epfl.pdf" target="_blank">Slides</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <span class="pub-title">Decentralisation of Cryptocurrencies</span>
+        <span class="pub-authors">Sarah Azouvi</span>
+        <span class="pub-venue">The London Cryptoparty · January 2018</span>
+        <div class="pub-links">
+          <a class="pub-link" href="slides/governance-cp.pdf" target="_blank">Slides</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <span class="pub-title">Introduction to Blockchain Technologies</span>
+        <span class="pub-authors">Sarah Azouvi</span>
+        <span class="pub-venue">Privacy International Forum · October 2017</span>
+        <div class="pub-links">
+          <a class="pub-link" href="slides/blockchain-pi.pdf" target="_blank">Slides</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <a class="pub-title" href="https://www.youtube.com/watch?v=ICfNAE1vWn8" target="_blank">Panel on Tradeoffs in Scaling Consensus</a>
+        <span class="pub-authors">Sarah Azouvi with Mustafa Al Bassam</span>
+        <span class="pub-venue">HardFork 2018 · London, December 2018</span>
+        <div class="pub-links">
+          <a class="pub-link" href="https://www.youtube.com/watch?v=ICfNAE1vWn8" target="_blank">Video</a>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <section id="blogposts">
+    <button class="collapse-toggle" onclick="toggleSection('blogposts-list', this)">
+      <span class="section-label" style="margin:0">Blogposts</span>
+      <span class="toggle-icon">▾ collapse</span>
+    </button>
+    <ul class="pub-list" id="blogposts-list">
+      <li class="pub-item">
+        <span class="pub-title">Decentralised AI posts</span>
+        <span class="pub-authors">Sarah Azouvi</span>
+        <span class="pub-venue"><a href="https://medium.com/@sazouvi" target="_blank">Medium</a></span>
+      </li>
+      <li class="pub-item">
+        <a class="pub-title" href="https://www.benthamsgaze.org/2018/03/26/incentives-in-security-protocols/" target="_blank">Incentives in Security Protocols</a>
+        <span class="pub-authors">Sarah Azouvi</span>
+        <span class="pub-venue">Bentham's Gaze · March 2018 &middot; Written after the 26th International Workshop on Security Protocols, Cambridge</span>
+      </li>
+      <li class="pub-item">
+        <a class="pub-title" href="https://www.benthamsgaze.org/2017/07/04/epfl-blockchain-summer-school/" target="_blank">EPFL Blockchain Summer School</a>
+        <span class="pub-authors">Sarah Azouvi et al.</span>
+        <span class="pub-venue">Bentham's Gaze · July 2017</span>
+      </li>
+      <li class="pub-item">
+        <a class="pub-title" href="https://www.benthamsgaze.org/2016/03/16/bitcoin-workshop-at-financial-crypto-2016/" target="_blank">Bitcoin Workshop at Financial Crypto 2016</a>
+        <span class="pub-authors">Sarah Azouvi</span>
+        <span class="pub-venue">Bentham's Gaze · March 2016</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="other">
+    <button class="collapse-toggle" onclick="toggleSection('other-list', this)">
+      <span class="section-label" style="margin:0">Other Events</span>
+      <span class="toggle-icon">▾ collapse</span>
+    </button>
+    <ul class="pub-list" id="other-list">
+      <li class="pub-item">
+        <span class="pub-title">Bitcoin Workshop — London CryptoParty</span>
+        <span class="pub-authors">Mentor &middot; <a href="https://www.cryptoparty.in/london" target="_blank">cryptoparty.in/london</a></span>
+        <span class="pub-venue">
+          Handouts: <a href="handouts/Cryptoparty.pdf" target="_blank">joint with Alexander Hicks</a> &middot; <a href="handouts/bitcoin.pdf" target="_blank">bitcoin</a>
+        </span>
+      </li>
+    </ul>
+  </section>
+
+</div>
+
+<script>
+  function toggleSection(id, btn) {
+    const list = document.getElementById(id);
+    const icon = btn.querySelector('.toggle-icon');
+    const collapsed = list.classList.toggle('collapsed');
+    icon.textContent = collapsed ? '▸ expand' : '▾ collapse';
+  }
+  // keep old name working too
+  function togglePapers(btn) { toggleSection('papers-list', btn); }
+</script>
+</body>
 </html>
