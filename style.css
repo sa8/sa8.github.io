@@ -12,7 +12,7 @@
   --accent: #c8b88a;
   --serif: 'Libre Baskerville', Georgia, serif;
   --sans: 'DM Sans', system-ui, sans-serif;
-  --max: 680px;
+  --max: 720px;
 }
 
 html, body {
@@ -86,7 +86,7 @@ nav {
 .site-header {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 2rem;
+  gap: 2.5rem;
   align-items: start;
   margin-bottom: 2.5rem;
   padding-bottom: 2.5rem;
@@ -108,7 +108,7 @@ nav {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.45rem;
   font-weight: 400;
 }
 
@@ -131,11 +131,12 @@ nav {
 .header-links a:hover { color: var(--accent); }
 
 .avatar {
-  width: 82px;
-  height: 82px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background: var(--surface);
-  border: 0.5px solid var(--border);
+  border: 1px solid rgba(200, 184, 138, 0.28);
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.025);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -320,7 +321,11 @@ section {
 /* Responsive */
 @media (max-width: 600px) {
   .site-header { grid-template-columns: 1fr; }
-  .avatar { display: none; }
+  .avatar {
+    display: block;
+    width: 104px;
+    height: 104px;
+  }
   nav { flex-direction: column; align-items: flex-start; gap: 1rem; }
   .nav-links { flex-wrap: wrap; gap: 1rem; }
 }
